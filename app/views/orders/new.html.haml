@@ -1,0 +1,43 @@
+= form_for @order, :url => person_listing_orders_path(current_person.id,@listing.id), :method => "POST" do |f|
+  - if @order.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@order.errors.count, "error")
+        prohibited this order from being saved:
+      %ul
+        - @order.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :firstname
+    %br
+      = f.text_field :firstname, size: 40
+  .field
+    = f.label :lastname
+    %br
+      = f.text_field :lastname, size: 40
+  .field
+    = f.label :username
+    %br
+      = f.text_field :username, size: 40
+  .field
+    = f.label :email
+    %br
+      = f.email_field :email, size: 40
+  %ivdiv.field
+    = f.label :card_number
+    %br
+      = f.text_field :card_number
+      .field
+        = f.label :card_verification, "Card Verification Value (CVV)"
+        %br/
+        = f.text_field :card_verification
+      .field
+        = f.label :cardtype
+        %br
+          = f.select :cardtype, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]]
+      .field
+        = f.label :card_expires_on
+        %br
+          =  f.date_select :card_expires_on, {:discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true, :order => [:month, :year]}
+      .actions
+        = f.submit  'Place Order'

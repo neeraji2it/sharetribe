@@ -1,0 +1,25 @@
+%table.table.table-bordered.table-striped
+  %h1 ORDERS
+  %thead
+    %tr
+      %th FirstName
+      %th LastName
+      %th Email
+      %th Cardtype
+      %th Cardno
+  %tbody
+    - @orders.each do |order|
+      %tr
+        %td
+          = order.firstname
+        %td
+          = order.lastname
+        %td
+          = order.email
+        %td
+          = order.cardtype
+        %td
+          = order.card_number
+        / %td
+        /   = link_to ('<span class="glyphicon glyphicon-paperclip"> </span>').html_safe, order.attachment_url
+        / %td
