@@ -10,6 +10,8 @@ gem 'activemerchant'
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 2.0'
 gem 'thinking-sphinx', '~> 3.1.1'
+gem 'capistrano', '~> 2.15.5'
+gem 'capistrano-ext'
 # Requiring 'compass' gem directly is not normally needed,
 # 'compass-rails' already does that.
 #
