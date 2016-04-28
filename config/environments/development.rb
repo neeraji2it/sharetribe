@@ -66,6 +66,9 @@ config.action_mailer.delivery_method = :smtp
     :enable_starttls_auto => true
   }
 
+
+  
+
   config.after_initialize do
   ActiveMerchant::Billing::Base.mode = :test
   paypal_options = {
