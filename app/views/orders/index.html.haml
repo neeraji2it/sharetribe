@@ -1,0 +1,25 @@
+%table.table.table-bordered.table-striped
+  %h1 ORDERS
+  %thead
+    %tr
+      %th FirstName
+      %th LastName
+      %th Email
+      %th Cardtype
+      %th Cardno
+  %tbody
+    - @orders.each do |order|
+      %tr
+        %td
+          = order.firstname
+        %td
+          = order.lastname
+        %td
+          = order.email
+        %td
+          = order.cardtype
+        %td
+          = order.cardno
+        / %td
+        /   = link_to ('<span class="glyphicon glyphicon-trash"> </span>').html_safe,  order, method: :delete, confirm: "Are you sure that you wish to delete #{order.email}?"
+        
