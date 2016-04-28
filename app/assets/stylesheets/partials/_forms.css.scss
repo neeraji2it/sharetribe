@@ -7,7 +7,7 @@ input[type=number],
 textarea {
   @include border-radius(em(5));
   border: 2px solid $border;
-  min-height: 22px;
+  min-height: 32px;
   width: 46%;
   padding: em(4) em(8);
 
