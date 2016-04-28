@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428054249) do
+
+ActiveRecord::Schema.define(version: 20160420055332) do
+
 
   create_table "auth_tokens", force: :cascade do |t|
     t.string   "token",            limit: 255
@@ -712,8 +714,11 @@ ActiveRecord::Schema.define(version: 20160428054249) do
     t.string   "express_token",    limit: 255
     t.string   "express_payer_id", limit: 255
     t.date     "card_expires_on"
+<<<<<<< HEAD
     t.string   "phone_no",         limit: 255
     t.integer  "listing_id",       limit: 4
+=======
+>>>>>>> 509a43a298fd814f4637f7f73082d3366e066c6f
   end
 
   create_table "participations", force: :cascade do |t|

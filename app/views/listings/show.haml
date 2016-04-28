@@ -75,7 +75,7 @@
             - youtube_link_ids.each do |youtube_id|
               .listing-description-youtube-wrapper
                 %iframe.listing-description-youtube-iframe{ title: t("listings.show.youtube_video_player"), width: 640, height:390, src: "//www.youtube.com/embed/#{ youtube_id }", frameborder: 0, allowfullscreen: true}
-    
+
     - @listing.custom_field_values.each do |custom_field_value|
       .row
         .col-12
@@ -118,6 +118,7 @@
             = render :partial => "comment", :collection => @listing.comments
           #comment-form
             = render :partial => "comment_form"
+
   %aside.col-4
     - if @listing.price
       .row
@@ -130,7 +131,7 @@
                 = text
 
     .row-with-divider
-    
+
    
     =link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), new_person_listing_order_path(current_person.id, @listing.id)
     .row-with-divider

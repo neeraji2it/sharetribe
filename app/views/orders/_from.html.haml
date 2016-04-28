@@ -1,5 +1,7 @@
 = form_for @order, :url => person_listing_orders_path(current_person.id,@listing.id), :method => "POST" do |f|
   - if @order.errors.any?s
+
+  - if @order.errors.any?
     #error_explanation
       %h2
         = pluralize(@order.errors.count, "error")
@@ -19,10 +21,13 @@
     = f.label :username
     %br
       = f.text_field :username, size: 40
+
   .field
     = f.label :email
     %br
       = f.email_field :email, size: 40
+
+
   %ivdiv.field
     = f.label :cardno
     %br

@@ -14,8 +14,10 @@
 #  express_token    :string(255)
 #  express_payer_id :string(255)
 #  card_expires_on  :date
+
 #  phone_no         :string(255)
 #  listing_id       :integer
+
 #
 
 require 'rails_helper'

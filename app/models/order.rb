@@ -16,6 +16,7 @@
 #  card_expires_on  :date
 #  phone_no         :string(255)
 #  listing_id       :integer
+
 #
 
 class Order < ActiveRecord::Base
@@ -33,9 +34,9 @@ class Order < ActiveRecord::Base
   end
 
 
+
   def price_in_cents
     self.listing.price_cents.to_i
-
   end
 
   private

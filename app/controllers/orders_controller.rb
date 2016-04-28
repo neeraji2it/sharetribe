@@ -1,8 +1,10 @@
 class OrdersController < ApplicationController
     
     def index
+
         @listing = Listing.find(params[:listing_id])
 		    @orders= Order.all
+
 	end
 
 
@@ -24,8 +26,9 @@ end
 
 def create
   @listing = Listing.find(params[:listing_id])
+
   @order= Order.new(order_params.merge(:listing_id => @listing.id))
-    #@orders.listing_id = @listing.id
+
  #@order.ip_address = request.remote_ip
   if @order.save && @order.purchase
       UserMailer.welcome_email(@order).deliver!
@@ -44,9 +47,11 @@ end
         end
     end
 
+
   def edit
     	@order= Order.find(params[:id])
   end
+
 
 
     def show

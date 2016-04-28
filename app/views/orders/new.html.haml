@@ -22,7 +22,9 @@
   .field
     = f.label :email
     %br
-      = f.text_field :email, size: 40
+
+      = f.email_field :email, size: 40
+
   %ivdiv.field
     = f.label :card_number
     %br
@@ -40,6 +42,7 @@
         %br
           =  f.date_select :card_expires_on, {:discard_day => true, :start_year => Date.today.year, :end_year => (Date.today.year+10), :add_month_numbers => true, :order => [:month, :year]}
       .actions
+
         %br
         = f.submit  'Place Order'
 
@@ -47,4 +50,4 @@
 
 
 
-       
+

@@ -8,7 +8,7 @@ class CreateOrders < ActiveRecord::Migration
       t.string :cardtype
       t.string :cardno
       t.string :username
-      
+
       t.timestamps null: false
     end
   end

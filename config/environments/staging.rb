@@ -104,7 +104,9 @@ Kassi::Application.configure do
   ActionMailer::Base.sendmail_settings = {
     :location       => '/usr/sbin/sendmail',
     :arguments      => '-i -t'
-  }    
+
+  }
+
 
   ActionMailer::Base.perform_deliveries = true # the "deliver_*" methods are available
 end
