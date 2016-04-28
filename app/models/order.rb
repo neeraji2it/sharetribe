@@ -31,16 +31,12 @@ class Order < ActiveRecord::Base
     transactions.create!(:action => "purchase", :amount => price_in_cents, :response => response)
     response.success?
   end
- 
+
 
   def price_in_cents
     self.listing.price_cents.to_i
 
   end
-
-
-
-  
 
   private
   

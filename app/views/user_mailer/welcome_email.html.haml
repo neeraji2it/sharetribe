@@ -3,18 +3,22 @@
   !!!
   %html
     %head
-      %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    
     %body
-      %h1
-        Welcome to #{@user.username}
+      %h2
+        Welcome  #{@user.username}
       %br  
-        Welcome to  #{@user.email}
+        Welcome   #{@user.email}
       %br
       %p
-        
-      %br  
+        %h4  
         your Price is: #{@user.price_in_cents}.
         %br
+
+        your Product is: #{@user.listing.title}.
+        %br 
+      %br
+     
       %p
         To login to the site, 
         just follow this link: #{@url}.

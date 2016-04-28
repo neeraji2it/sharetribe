@@ -60,8 +60,8 @@ config.action_mailer.delivery_method = :smtp
     :address              => "smtp.gmail.com",
     :port                 => 587,
     #:domain               => 'baci.lindsaar.net',
-    :user_name            => '',
-    :password             => '', #'dinemedia!@#',
+    :user_name            => 'kammaranagaraju@gmail.com',
+    :password             => 'Nagaraju@2015', #'dinemedia!@#',
     :authentication       => 'plain',
     :enable_starttls_auto => true
   }
